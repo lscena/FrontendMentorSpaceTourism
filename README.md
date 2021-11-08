@@ -23,11 +23,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![finished challenge screenshot](https://raw.githubusercontent.com/lscena/FrontendMentorSpaceTourism/main/screenshot.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site URL](https://your-live-site-url.com)
 
 ## My process
 
