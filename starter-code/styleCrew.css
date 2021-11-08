@@ -1,0 +1,344 @@
+body{
+    /* background-image: url(./assets/crew/background-crew-desktop.jpg); */
+    /* background-size: cover; */
+
+    background: url(./assets/crew/background-crew-desktop.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font-family: 'Bellefair', serif;
+    margin:0;
+
+    color: white;
+}   
+
+nav{
+    display: flex;
+    /* margin: 4.4% 0 0 0;
+    height: 96px; */
+
+    margin: 7vh 0 0 0;
+    height: 13vh;
+}
+nav div.logo{
+    flex:1 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div.linksBlur{
+    flex:6 0 0;    
+
+    text-transform: uppercase;
+
+    /* Blur: */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgb(151 151 151 / 15%);
+    
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-right: 5%;
+    padding-left: 2%;
+}
+.linksBlur span.bold{
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.linkElement{
+    height: 100%;
+    min-height: -moz-available; /* WebKit-based browsers will ignore this. */
+    min-height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    min-height: fill-available;
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    letter-spacing: 1px;
+}
+.linkElement:hover{
+    /* border-bottom: 3px solid grey; */
+
+    box-shadow: inset 0px -4px 0 #979797;
+}
+.linkElement.elementCurrent{
+    /* border-bottom: 3px solid white; */
+    box-shadow: inset 0px -4px 0 white;
+}
+
+nav div.lineaHorizontal{
+    flex:4 0 0 ;
+    display: flex;
+    align-items: center;
+}
+.lineaHorizontal div.linea{
+    background-color:rgb(151 151 151 / 50%);
+    height: 1px;
+    width: 100%;
+    position: relative;
+    left: 6%;
+    z-index: 1;
+}
+
+main{
+    display: flex;
+    /* align-items: end; */
+    /* height: 65vh;
+    margin-bottom: 15vh; */
+    height: 80vh;
+}
+
+main .left{
+    flex: 1 0 0;
+    display: flex;
+    flex-direction:column ;
+}
+
+main .left .text{
+    flex: 2.2 0 0;
+    display: flex;
+    align-items: center;
+    margin-left: 9vw;
+    font-size: 24px;
+}
+main .left .bottom{
+    flex: 10 0 0;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-left: 9vw;    
+}
+.bottom .crewDes{
+    flex: 4 0 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.bottom .crewButtons{
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+    margin-bottom:55px;
+}
+.crewDes .title{
+    color: rgb(255 255 255 / 70%);
+    text-transform: uppercase;
+    font-size: 27px;
+}
+.crewDes .name{
+    color: rgb(255 255 255 / 100%);
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 25px 0 20px 0;
+}
+.crewDes .description{
+    color: rgb(255 255 255 / 70%);
+    font-size: 19px;
+    line-height: 30px;
+    max-width: 73%;
+}
+
+a.linkCrewMember{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgb(255 255 255 / 30%);
+    margin-right: 20px;
+    transition: all 0.2s;
+}
+.crewSelected{
+    background-color: white !important;
+}
+a.linkCrewMember:hover{
+    background-color: rgb(255 255 255 / 65%) !important;
+}
+
+
+
+main .left .text .number{
+    color: rgb(255 255 255 / 25%);
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+main .left .text .action{
+    color: rgb(255 255 255 / 100%);
+    text-transform: uppercase;
+    margin-left: 15px;
+    letter-spacing: 1px;
+}
+
+main .right{
+    flex: 1 0 0;
+    display: flex;
+    justify-content: center; 
+}
+main .right .container{
+    display: flex;    
+    /* justify-content: center; */
+    /* flex-direction:column;
+    flex: 1 0 0;
+    padding-right: 9vw; */
+}
+main .right .container img{
+    margin-top: 50px;
+    /* margin-left: 50px; */
+}
+
+
+@media (max-width: 1050px) {
+    nav{
+        margin: 0;
+    }
+    nav .linkElement{
+        font-size: 0.81rem;
+    }
+    a.linkElement span.bold{
+        display: none;
+    }
+    main .left .text {
+        margin-top: 3%;
+    }
+
+    main{
+        flex-direction: column;
+    }
+    main .right .container {
+        justify-content: center;
+    }
+    main .right .container img{
+        width: 70%;
+    }
+    .bottom .crewDes{
+        text-align: center;
+        align-items: center;
+        margin-top: 3%;
+    }
+    .bottom .crewButtons{
+        margin-bottom: 0;
+        justify-content: center;
+        align-items: center;     
+        margin-top: 3%;           
+    }
+    main .left .bottom {
+        margin: 0;
+    }
+}
+
+.hamburger{
+    display: none;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+.hamContent{
+    display: block;
+    cursor: pointer;
+}
+.hamburger .line{
+    width: 35px;
+    height: 4px;
+    background: #D0D6F9;
+    margin: 8px 0;
+}
+.hamMenu{
+    position: fixed;
+    width: 65vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+
+    display: none;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgb(151 151 151 / 15%);    
+}
+#threeLinesHam.open + .hamMenu{
+    display: block;
+}
+.hamMenuContainer{
+    display: flex;
+    flex-direction: column;
+}
+.hamMenuCross{
+    flex: 0 0 13vh;    
+    padding-right: 10%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.hamMenuLinks{
+    flex:1 0 0;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.hamMenuLink{
+    padding: 5% 0;
+}
+.hamMenuLink span.bold{
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.hamMenuLink .text{
+    text-transform: uppercase;
+    color: #e1e1e1;
+}
+.hamMenuLink span{
+    padding-bottom: 2px;
+}
+.hamMenuLink.selected span{
+    color: white !important;
+    border-bottom: 2px solid white;
+}
+.hamMenuLink a{
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.hamMenuLink a:visited span.bold{
+    color: white;
+}
+.hamMenuLink a:hover{
+    border-bottom: 2px solid #979797;    
+}
+.hamMenuLink a:hover span{
+    color: white !important;
+}
+.crossContainer{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    nav .lineaHorizontal{
+        display: none !important;
+    }
+    nav .linksBlur{
+        display: none !important;
+    }
+    nav .hamburger{
+        display: flex !important;
+        flex: 1 0 0;        
+        margin-right: 10%;        
+    }
+    nav .logo{
+        justify-content: start !important;
+        margin-left: 10% !important;
+    }
+    .text .content .p3 {
+        max-width: 85% !important;
+    }
+}
